@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="/css/style.css">
+    <title>Dolly Homepage</title>
+</head>
+<body>
+    <main>
+        <div id="sidebar">
+            <ul class="categories">
+                <li id="Homepage"><a href="/">Homepage</a></li>
+                <li id="Profile"><a href="/profile">Profile</a></li>
+            </ul>
+        </div>
+        <div>
+
+<h1>Hello, {{username}}!</h1>
+    <p>Email: {{email}}</p>
+
+    <h2>My Posts</h2>
+    <ul>
+        {{#each bleets as |bleet| }}
+        <li>
+            {{content}}
+            <button class="btn delete-btn" data-id={{id}}>Delete</button>
+        </li>
+        {{/each}}
+        </div>
+    </ul>
+    </main>
+</body>
+</html>
+
+<script src="./js/profile.js"></script>
